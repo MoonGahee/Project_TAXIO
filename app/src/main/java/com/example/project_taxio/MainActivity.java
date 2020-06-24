@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setToolbar(); //ActionBar 대신 ToolBar로 변경 Method
         setDrawer(); //NavigationDrawer Method
     }
+
     //ActionBar 대신 ToolBar로 변경 Method
     public void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // 툴바를 액티비티의 앱바로 지정
@@ -44,12 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
 
                 if (id == R.id.drawer_schTrip) {
-                }
-
-                else if (id == R.id.drawer_myInfo) {
-                }
-
-                else if (id == R.id.drawer_setting){
+                } else if (id == R.id.drawer_myInfo) {
+                } else if (id == R.id.drawer_setting) {
 
                 }
 
