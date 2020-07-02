@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (id == R.id.drawer_myInfo) {
 
+
                 } else if (id == R.id.drawer_setting) {
 
                 }
