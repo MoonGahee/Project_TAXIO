@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
 
                 if (id == R.id.drawer_schTrip) {
+
                 } else if (id == R.id.drawer_myInfo) {
+
                 } else if (id == R.id.drawer_setting) {
 
                 }
