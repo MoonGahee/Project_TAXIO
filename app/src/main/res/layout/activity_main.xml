@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         app:headerLayout="@layout/header"
+        
         app:menu="@menu/drawer" /> <!--NavigationDrawer-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
