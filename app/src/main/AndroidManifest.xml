@@ -18,7 +18,7 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <meta-data
         android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version"/>
+        android:value="AIzaSyDQ3nFU6JkxQOEA1ZFW8E5oEwV8l-OX6WQ"/>
 
     <application
         android:allowBackup="true"
