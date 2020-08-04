@@ -23,8 +23,8 @@
         android:layout_height="match_parent">
 
         <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar"
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="parent" /> <!--ToolBar-->
 

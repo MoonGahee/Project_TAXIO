@@ -11,14 +11,14 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:openDrawer="start"
-    tools:context=".CompleteReservation">
+    tools:context=".generalReservationCompleteActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <include layout="@layout/app_bar"
-            android:id="@+id/abar"
+            android:id="@+id/bar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/> <!--툴바-->
 
@@ -26,7 +26,7 @@
             android:id="@+id/reservation1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/abar"
+            app:layout_constraintTop_toBottomOf="@+id/bar"
             app:layout_constraintLeft_toLeftOf="parent"
             android:text="예약 완료"
             style="@style/title1"/>
@@ -52,6 +52,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="100dp"
             android:text="메인으로 돌아가기"
+            style="@style/button"
             android:background="@drawable/button_long_trip"/>
 
 
@@ -63,7 +64,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/navi_header"
+        app:headerLayout="@layout/header"
         app:menu="@menu/drawer"/> <!--네비게이션 드로어 추가-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

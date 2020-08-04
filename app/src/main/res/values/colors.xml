@@ -4,4 +4,5 @@
     <color name="button">#AAD9FA</color>
     <color name="mainText">#2967B9</color>
     <color name="bar">#3498DB</color>
+    <color name="back">#FFFFFF</color>
 </resources>

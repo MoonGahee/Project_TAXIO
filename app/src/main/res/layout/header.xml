@@ -5,8 +5,7 @@
     android:layout_height="176dp"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:background="@color/trip">
+    android:paddingLeft="16dp">
 
     <ImageView
         android:id="@+id/profile_pic"

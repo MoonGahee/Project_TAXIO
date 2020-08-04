@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/background"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:openDrawer="start"
@@ -19,18 +19,28 @@
         >
 
         <include layout="@layout/app_bar"
-            android:id="@+id/abar"
+            android:id="@+id/bar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/> <!--툴바-->
 
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/bell"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bar" />
+
         <TextView
-            android:id="@+id/comingTripTitle"
+            android:id="@+id/alarm"
             style="@style/title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="앞으로의 일정"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/abar"
+            android:text="알림"
+            app:layout_constraintLeft_toRightOf="@+id/bell"
+            app:layout_constraintTop_toBottomOf="@+id/bar"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,11 +48,10 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@color/tButton"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/comingTripTitle">
+            app:layout_constraintTop_toBottomOf="@id/alarm">
 
             <TextView
                 android:id="@+id/day1"
@@ -114,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="10dp"
-            android:background="@color/tButton"
+            android:background="#FFFFFF"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/weather">
@@ -154,7 +163,6 @@
             android:layout_margin="20dp"
             android:background="@drawable/button_long"
             android:text="새로운 여행 만들기"
-            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/comingTrip" />
@@ -182,7 +190,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@color/tButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recruitCount">
@@ -217,7 +224,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@color/tButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recruitList1">
@@ -252,7 +258,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@color/tButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recruitList2">
@@ -290,7 +295,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/navi_header"
+        app:headerLayout="@layout/header"
         app:menu="@menu/drawer"/> <!--네비게이션 드로어 추가-->
 
 

@@ -4,23 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="@color/background">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/abar"
-        style="@style/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+    <include layout="@layout/app_bar"
+        android:id="@+id/bar"
         app:layout_constraintLeft_toLeftOf="parent"
-        >
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/title"/>
-
-    </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
+        app:layout_constraintTop_toTopOf="parent"/> <!-- 툴바 -->
 
     <TextView
         android:id="@+id/recruitDriver1"
@@ -29,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="여행 일정"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abar" />
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
 
     <TextView
         android:id="@+id/recruitDriver2"
@@ -79,6 +68,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/button_long"
         android:text="확인"
+        style="@style/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tripDetail" />

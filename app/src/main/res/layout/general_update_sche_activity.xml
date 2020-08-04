@@ -5,31 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/background">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:map="http://schemas.android.com/apk/res-auto">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/abar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+        <include layout="@layout/app_bar"
+            android:id="@+id/bar"
             app:layout_constraintLeft_toLeftOf="parent"
-            style="@style/back">
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/title"/>
-        </androidx.appcompat.widget.Toolbar><!-- 툴바 -->
+            app:layout_constraintTop_toTopOf="parent"/><!-- 툴바 -->
 
         <TextView
             android:id="@+id/intro2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/abar"
+            app:layout_constraintTop_toBottomOf="@+id/bar"
             app:layout_constraintLeft_toLeftOf="parent"
             android:text="일정 정하기"
             style="@style/title1"/> <!-- 안내 -->
@@ -64,12 +55,13 @@
 
         <Button
             android:id="@+id/search_button2"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/date2"
             app:layout_constraintLeft_toRightOf="@+id/search2"
             android:text="검색"
-            style="@style/basic"/> <!-- 검색 버튼 -->
+            style="@style/button"
+            android:background="@drawable/button_short"/> <!-- 검색 버튼 -->
 
         <fragment
             android:id="@+id/map2"
@@ -79,6 +71,7 @@
             map:cameraTargetLat="33.49"
             map:cameraTargetLng="126.5"
             map:cameraZoom="15"
+            android:layout_margin="4dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_button2"
             tools:ignore="MissingConstraints" /> <!-- 지도 -->
@@ -126,12 +119,13 @@
 
         <Button
             android:id="@+id/update_finish2"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/trip2"
             app:layout_constraintLeft_toLeftOf="parent"
             android:text="변경완료"
-            android:background="@color/tButton"
+            style="@style/button"
+            android:background="@drawable/button_short"
             android:layout_margin="10dp"/> <!-- 완료 버튼 -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>

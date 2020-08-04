@@ -52,7 +52,7 @@
             android:layout_toRightOf="@+id/infoDriver"
             android:clickable="true"
             android:text="요청"
-            android:textColor="@color/trip" />
+            android:textColor="@color/mainText" />
 
         <TextView
             android:id="@+id/sendMsg"
@@ -64,7 +64,7 @@
             android:layout_toRightOf="@+id/recruit"
             android:clickable="true"
             android:text="Send Message"
-            android:textColor="@color/taxi" />
+            android:textColor="@color/mainText" />
 
         <TextView
             android:id="@+id/infoPrice"

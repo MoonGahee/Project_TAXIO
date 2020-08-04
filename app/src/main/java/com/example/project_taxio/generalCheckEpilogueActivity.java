@@ -32,7 +32,7 @@ public class generalCheckEpilogueActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.general_check_epilogue_activity);
 
-        toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
+        toolbar = (Toolbar)findViewById(R.id.bar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
