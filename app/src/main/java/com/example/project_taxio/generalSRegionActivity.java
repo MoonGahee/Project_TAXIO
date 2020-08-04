@@ -18,7 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.taxio.R;
 import com.example.taxio.select_scheduleActivity;
 
-public class general_s_regionActivity extends AppCompatActivity {
+public class generalSRegionActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     TextView title_text;
