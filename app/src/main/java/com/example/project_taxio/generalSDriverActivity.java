@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,8 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Arrays;
 import java.util.List;
 
-public class generalSDriverActivity {
-    private RecyclerRecruitDriver adapter;
+public class generalSDriverActivity extends AppCompatActivity {
+    private generalDriverAdapter adapter;
     RadioGroup rg1, rg2, rg3;
     RadioButton noGender, manDriver, womanDriver, allTrunk, yesTrunk, noTrunk, under4, under6, over6;
     Button searchBtn;
@@ -44,7 +45,7 @@ public class generalSDriverActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(RecruitDriver.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -87,7 +88,7 @@ public class generalSDriverActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView_driver.setLayoutManager(linearLayoutManager);
 
-        adapter = new RecyclerRecruitDriver();
+        adapter = new generalDriverAdapter();
         recyclerView_driver.setAdapter(adapter);
     }
 
@@ -101,7 +102,7 @@ public class generalSDriverActivity {
         List<Integer> listDriverPhoto = Arrays.asList(R.drawable.taxi, R.drawable.taxi, R.drawable.taxi,R.drawable.taxi, R.drawable.taxi, R.drawable.taxi);
 
         for(int i = 0; i < listDriverName.size(); i++){  //DriverData Class 객체에 set
-            DriverData data = new DriverData();
+            DriverItem data = new DriverItem();
             data.setDriverName(listDriverName.get(i));
             data.setDriverInfo(listDriverInfo.get(i));
             data.setDirverPrice(listDriverPrice.get(i));

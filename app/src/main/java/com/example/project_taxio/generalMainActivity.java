@@ -40,14 +40,14 @@ public class generalMainActivity extends AppCompatActivity {
 
                 int id = menuItem.getItemId();
 
-                if(id == R.id.nav_schTrip){
-                    Intent intent = new Intent(getApplicationContext(), RecruitDriver.class);
+                if(id == R.id.drawer_schTrip){
+                    Intent intent = new Intent(getApplicationContext(), generalSDriverActivity.class);
                     startActivity(intent);
                     finish();
                 }
 
-                else if(id == R.id.myInfo){
-                    Intent intent = new Intent(getApplicationContext() Epilogue.class);
+                else if(id == R.id.drawer_myInfo){
+                    Intent intent = new Intent(getApplicationContext(), generalWriteEpilogueActivity.class);
                     startActivity(intent);
                 }
                 return true;
@@ -60,7 +60,7 @@ public class generalMainActivity extends AppCompatActivity {
         newTripBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), NewScheduleRegion.class);
+                Intent intent = new Intent(getApplicationContext(), generalSRegionActivity.class);
                 startActivity(intent);
             }
         });

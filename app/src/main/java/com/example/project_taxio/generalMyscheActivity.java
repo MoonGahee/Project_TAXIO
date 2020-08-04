@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Arrays;
 import java.util.List;
 
-public class generalMyscheActivity {
-    private RecyclerTripSchedule adapter;
+public class generalMyscheActivity extends AppCompatActivity {
+    private generalMyscheAdapter adapter;
     TextView title_text;
     Toolbar toolbar;
     RecyclerView tripRecycler;
@@ -26,7 +27,7 @@ public class generalMyscheActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         //AppBar
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trip_schedule);
+        setContentView(R.layout.general_mysche_activity);
 
         toolbar = (Toolbar) findViewById(R.id.bar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
@@ -40,7 +41,7 @@ public class generalMyscheActivity {
         tripRecycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(TripSchedule.this, TripScheduleDetail.class);
+                Intent i = new Intent(getApplicationContext(), generalMyscheDetailActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -55,7 +56,7 @@ public class generalMyscheActivity {
         RecyclerView tripRecycler = findViewById(R.id.tripRecycler);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         tripRecycler.setLayoutManager(linearLayoutManager);
-        adapter = new RecyclerTripSchedule();
+        adapter = new generalMyscheAdapter();
         tripRecycler.setAdapter(adapter);
     }
 
@@ -65,7 +66,7 @@ public class generalMyscheActivity {
         List<String> listTripPosition = Arrays.asList("여행중", "모집 중", "여행 준비");
 
         for (int i = 0; i < listTripSchedule.size(); i++) {
-            TripData data = new TripData();
+            myscheItem data = new myscheItem();
             data.setTripSchedule(listTripSchedule.get(i));
             data.setTripPosition(listTripPosition.get(i));
 
@@ -80,7 +81,7 @@ public class generalMyscheActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(TripSchedule.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }

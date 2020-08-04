@@ -61,7 +61,7 @@ public class generalCheckEpilogueActivity extends AppCompatActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckEpilogue.this, MainActivity.class);
+                Intent i = new Intent(generalCheckEpilogueActivity.this, generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -70,7 +70,7 @@ public class generalCheckEpilogueActivity extends AppCompatActivity {
         edit_epilogue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckEpilogue.this, Epilogue.class);
+                Intent i = new Intent(generalCheckEpilogueActivity.this, generalWriteEpilogueActivity.class);
                 startActivity(i);
                 finish();
             }

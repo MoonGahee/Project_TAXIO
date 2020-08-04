@@ -12,11 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.Calendar;
 
-public class generalSDateActivity {
+public class generalSDateActivity extends AppCompatActivity {
     Button ok;
     CalendarView cal;
     Calendar myCal;
@@ -39,7 +40,7 @@ public class generalSDateActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(select_scheduleActivity.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -50,13 +51,13 @@ public class generalSDateActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dlg = new AlertDialog.Builder(select_scheduleActivity.this);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(getApplicationContext());
                 dlg.setTitle("일정 확인");
                 dlg.setMessage(date+"이 선택한 일정이 맞습니까?");
                 dlg.setPositiveButton("예", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent i = new Intent(select_scheduleActivity.this, select_taxiActivity.class);
+                        Intent i = new Intent(getApplicationContext(), generalSTaxiActivity.class);
                         i.putExtra("date", date);
                         startActivity(i);
                         finish();

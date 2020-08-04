@@ -12,7 +12,13 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.akshaykale.swipetimeline.TimelineFragment;
+import com.akshaykale.swipetimeline.TimelineGroupType;
+import com.akshaykale.swipetimeline.TimelineObject;
+import com.akshaykale.swipetimeline.TimelineObjectClickListener;
 
 import java.util.ArrayList;
 
@@ -55,7 +61,7 @@ public class generalMakeScheActivity extends AppCompatActivity implements Timeli
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckSchedule.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -68,7 +74,7 @@ public class generalMakeScheActivity extends AppCompatActivity implements Timeli
         edit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckSchedule.this, UpdateSchedule.class);
+                Intent i = new Intent(getApplicationContext(), generalUpdateScheActivity.class);
                 startActivity(i);
             }
         });
@@ -76,7 +82,7 @@ public class generalMakeScheActivity extends AppCompatActivity implements Timeli
         taxi_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckSchedule.this, select_taxiActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalSTaxiActivity.class);
                 startActivity(i);
             }
         });
@@ -84,7 +90,7 @@ public class generalMakeScheActivity extends AppCompatActivity implements Timeli
         trip_fin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CheckSchedule.this, RecruitDriver.class);
+                Intent i = new Intent(getApplicationContext(), generalSDriverActivity.class);
                 startActivity(i);
             }
         });
@@ -93,11 +99,11 @@ public class generalMakeScheActivity extends AppCompatActivity implements Timeli
     private ArrayList<TimelineObject> loadData() {
         ArrayList<TimelineObject> obj = new ArrayList<>();
 
-        obj.add(new TestO(Long.parseLong("1483196400000"), "제주공항", "url"));
-        obj.add(new TestO(Long.parseLong("1484146800000"), "용두암", "url"));
-        obj.add(new TestO(Long.parseLong("1485961200000"), "성산일출봉", "url"));
-        obj.add(new TestO(Long.parseLong("1487084400000"), "동문시장", "url"));
-        obj.add(new TestO(Long.parseLong("1489244400000"), "하얏트호텔", "url"));
+        obj.add(new generalTimeline(Long.parseLong("1483196400000"), "제주공항", "url"));
+        obj.add(new generalTimeline(Long.parseLong("1484146800000"), "용두암", "url"));
+        obj.add(new generalTimeline(Long.parseLong("1485961200000"), "성산일출봉", "url"));
+        obj.add(new generalTimeline(Long.parseLong("1487084400000"), "동문시장", "url"));
+        obj.add(new generalTimeline(Long.parseLong("1489244400000"), "하얏트호텔", "url"));
 
         return obj;
     }

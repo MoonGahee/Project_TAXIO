@@ -8,13 +8,14 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class generalReservationCompleteActivity {
+public class generalReservationCompleteActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
 
     @Override
@@ -38,12 +39,12 @@ public class generalReservationCompleteActivity {
 
                 int id = menuItem.getItemId();
 
-                if (id == R.id.nav_schTrip) {
-                    Intent intent = new Intent(CompleteReservation.this, TripSchedule.class);
+                if (id == R.id.drawer_schTrip) {
+                    Intent intent = new Intent(getApplicationContext(), generalMyscheActivity.class);
                     startActivity(intent);
                     finish();
-                } else if (id == R.id.myInfo) {
-                    Intent intent = new Intent(CompleteReservation.this, Epilogue.class);
+                } else if (id == R.id.drawer_myInfo) {
+                    Intent intent = new Intent(getApplicationContext(), generalWriteEpilogueActivity.class);
                     startActivity(intent);
                 }
                 return true;
@@ -54,7 +55,7 @@ public class generalReservationCompleteActivity {
         findViewById(R.id.goMain).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CompleteReservation.this, MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(intent);
             }
         });

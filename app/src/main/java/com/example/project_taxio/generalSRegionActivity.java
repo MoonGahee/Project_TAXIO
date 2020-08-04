@@ -15,8 +15,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.taxio.R;
-import com.example.taxio.select_scheduleActivity;
 
 public class generalSRegionActivity extends AppCompatActivity {
 
@@ -34,13 +32,13 @@ public class generalSRegionActivity extends AppCompatActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(NewScheduleRegion.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                 builder.setTitle("지역 확인");
                 builder.setMessage("선택하신 지역이 제주도가 맞습니까?");
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(NewScheduleRegion.this, select_scheduleActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), generalSDateActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -66,7 +64,7 @@ public class generalSRegionActivity extends AppCompatActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -77,7 +75,7 @@ public class generalSRegionActivity extends AppCompatActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }

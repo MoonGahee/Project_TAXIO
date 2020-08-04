@@ -11,9 +11,10 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class generalSTaxiActivity {
+public class generalSTaxiActivity extends AppCompatActivity {
     Button start_btn, ok;
     Spinner rent_spin;
     TextView taxi_day, title_text;
@@ -37,7 +38,7 @@ public class generalSTaxiActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(select_taxiActivity.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -63,7 +64,7 @@ public class generalSTaxiActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(select_taxiActivity.this, FindSchedule_Activity.class);
+                Intent i = new Intent(getApplicationContext(), generalMakeSche1Activity.class);
                 startActivity(i);
                 finish();
             }

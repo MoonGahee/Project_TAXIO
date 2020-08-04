@@ -12,9 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class generalWriteEpilogueActivity {
+public class generalWriteEpilogueActivity extends AppCompatActivity {
     Button cancel_btn, registration_btn;
     Toolbar toolbar;
     TextView title_text;
@@ -39,7 +40,7 @@ public class generalWriteEpilogueActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Epilogue.this, MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), generalMainActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -48,20 +49,20 @@ public class generalWriteEpilogueActivity {
         cancel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Epilogue.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                 builder.setTitle("작성 취소");
                 builder.setMessage("후기 작성을 정말 취소하시겠습니까?");
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Epilogue.this, MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), generalMainActivity.class);
                         startActivity(intent);
                     }
                 });
                 builder.setNegativeButton("아니요", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(Epilogue.this, "마저 다 작성해주세요", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "마저 다 작성해주세요", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder.show();
@@ -71,20 +72,20 @@ public class generalWriteEpilogueActivity {
         registration_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Epilogue.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                 builder.setTitle("후기 작성");
                 builder.setMessage("후기 작성을 마무리 하시겠습니까?");
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Epilogue.this, CheckEpilogue.class);
+                        Intent intent = new Intent(getApplicationContext(), generalMakeScheActivity.class);
                         startActivity(intent);
                     }
                 });
                 builder.setNegativeButton("아니요", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(Epilogue.this, "마저 다 작성해주세요", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "마저 다 작성해주세요", Toast.LENGTH_SHORT).show();
                     }
                 });
                 builder.show();

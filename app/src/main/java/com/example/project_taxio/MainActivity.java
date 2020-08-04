@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     //ActionBar 대신 ToolBar로 변경 Method
     public void setToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // 툴바를 액티비티의 앱바로 지정
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
