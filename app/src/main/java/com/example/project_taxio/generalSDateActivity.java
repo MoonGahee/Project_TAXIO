@@ -25,7 +25,7 @@ public class generalSDateActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.select_schdule);
+        setContentView(R.layout.general_select_date_activity);
         setToolbar();
 
         ok = findViewById(R.id.ok);

@@ -30,7 +30,7 @@ public class generalCheckEpilogueActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.check_epilogue);
+        setContentView(R.layout.general_check_epilogue_activity);
 
         toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정

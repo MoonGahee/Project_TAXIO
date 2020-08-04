@@ -22,7 +22,7 @@ public class generalSTaxiActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.select_taxi);
+        setContentView(R.layout.general_select_taxi_activity);
         setToolbar();
         start_btn = findViewById(R.id.start_btn);
         ok = findViewById(R.id.ok);

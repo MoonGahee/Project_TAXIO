@@ -22,7 +22,7 @@ public class generalWriteEpilogueActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.epilogue);
+        setContentView(R.layout.general_write_epilogue_activity);
 
         cancel_btn = findViewById(R.id.cancel_btn);
         registration_btn = findViewById(R.id.registration_btn);

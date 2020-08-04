@@ -26,7 +26,7 @@ public class generalMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.general_main_activity);
         setToolbar();
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawerLayout);

@@ -27,7 +27,7 @@ public class generalSRegionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.select_region);
+        setContentView(R.layout.general_select_region_activity);
 
         map = findViewById(R.id.imageKorea);
 

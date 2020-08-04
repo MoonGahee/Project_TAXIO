@@ -30,7 +30,7 @@ public class generalSDriverActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recruit_driver);
+        setContentView(R.layout.general_select_driver_activity);
 
         toolbar = (Toolbar)findViewById(R.id.appbar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
