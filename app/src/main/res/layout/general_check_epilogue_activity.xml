@@ -288,7 +288,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/distinction4"
                 app:layout_constraintLeft_toRightOf="@+id/image4"
                 android:text="좀 아쉬웠네요"
-                
+
                 style="@style/basic"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
