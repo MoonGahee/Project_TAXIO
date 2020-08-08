@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -20,12 +21,16 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.project_taxio.MainActivity;
 import com.example.project_taxio.R;
 
+import java.util.ArrayList;
+
 public class generalCheckEpilogueActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     TextView title_text;
-    RatingBar rating1, rating2, rating3, rating4;
     Button edit_epilogue;
+    ListView listView;
+    Epilogue_listAdapter epilogue_listAdapter;
+    ArrayList<Epilogue_list_item> list_itemArrayList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,21 +44,12 @@ public class generalCheckEpilogueActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
 
         edit_epilogue = findViewById(R.id.edit_epilogue);
+        listView = findViewById(R.id.epilogues);
 
-        rating1 = findViewById(R.id.rating1);
-        rating2 = findViewById(R.id.rating2);
-        rating3 = findViewById(R.id.rating3);
-        rating4 = findViewById(R.id.rating4);
+        list_itemArrayList = new ArrayList<Epilogue_list_item>();
 
-        LayerDrawable star1 = (LayerDrawable) rating1.getProgressDrawable();
-        LayerDrawable star2 = (LayerDrawable) rating2.getProgressDrawable();
-        LayerDrawable star3 = (LayerDrawable) rating3.getProgressDrawable();
-        LayerDrawable star4 = (LayerDrawable) rating4.getProgressDrawable();
-
-        star1.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
-        star2.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
-        star3.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
-        star4.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+        epilogue_listAdapter = new Epilogue_listAdapter(generalCheckEpilogueActivity.this, list_itemArrayList);
+        listView.setAdapter(epilogue_listAdapter);
 
         title_text = findViewById(R.id.title_text);
         title_text.setClickable(true);
